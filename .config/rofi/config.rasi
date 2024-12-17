@@ -1,0 +1,148 @@
+configuration {
+  modes: "drun,run,window,filebrowser";
+  font: "sans 12";
+  fixed-num-lines: true;
+  show-icons: true;
+  icon-theme: "Reversal-blud-dark";
+  drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
+  sidebar-mode: true;
+  window-format: "{w}    {c}   {t}";
+  window-thumbnail: true;
+  timeout {
+    action: "kb-cancel";
+    delay: 0;
+  }
+  filebrowser {
+    directories-first: true;
+    sorting-method: "name";
+  }
+}
+
+* {
+  black: #0e1013;
+  bg0: #1f2329;
+  bg1: #282c34;
+  bg2: #30363f;
+  bg3: #323641;
+  bg-d: #181b20;
+  bg-blue: #61afef;
+  bg-yellow: #e8c88c;
+  fg: #a0a8b7;
+  purple: #bf68d9;
+  green: #8ebd6b;
+  orange: #cc9057;
+  blue: #4fa6ed;
+  yellow: #e2b86b;
+  cyan: #48b0bd;
+  red: #e55561;
+  grey: #535965;
+  light-grey: #7a818e;
+  dark-cyan: #266269;
+  dark-red: #8b3434;
+  dark-yellow: #835d1a;
+  dark-purple: #7e3992;
+  background: transparent;
+}
+
+window {
+  border: 0;
+  children: [main-box];
+}
+
+main-box {
+  spacing: 10px;
+  background-color: @bg0;
+  padding: 10px;
+  border-radius: 10px;
+  children: [
+    entry,
+    message,
+    listview
+  ];
+}
+
+message {
+  border: 0;
+  background-color: @bg-blue;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+entry {
+  background-color: @bg1;
+  color: @fg;
+  border: 2px;
+  border-color: @cyan;
+  border-radius: 10px;
+  padding: 10px;
+  expand: false;
+}
+
+scrollbar {
+  handle-color: @fg;
+  border: 1px;
+  border-radius: 10px;
+  border-color: @bg3;
+}
+
+listview {
+  border: 0;
+  fixed-height: false;
+  dynamic: true;
+  lines: 10;
+}
+
+element {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+element-icon {
+  size: 30;
+}
+element-text {
+  vertical-align: 0.5;
+  background-color: inherit;
+  text-color: inherit;
+}
+element.normal.normal {
+  background-color: @bg1;
+  text-color: @fg;
+}
+element.normal.urgent {
+  background-color: @bg1;
+  text-color: @red;
+}
+element.normal.active {
+  background-color: @bg1;
+  text-color: @green;
+}
+element.alternate.normal {
+  background-color: @bg;
+  text-color: @fg;
+}
+element.alternate.urgent {
+  background-color: @bg1;
+  text-color: @red;
+}
+element.alternate.active {
+  background-color: @bg1;
+  text-color: @green;
+}
+element.alternate.normal {
+  background-color: @bg1;
+  text-color: @fg;
+}
+element.selected.normal {
+  background-color: @bg2;
+  text-color: @fg;
+}
+element.selected.urgent {
+  background-color: @bg2;
+  text-color: @red;
+}
+element.selected.active {
+  background-color: @bg2;
+  text-color: @green;
+}

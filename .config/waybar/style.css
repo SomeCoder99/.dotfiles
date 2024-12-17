@@ -1,0 +1,99 @@
+@define-color black #0e1013;
+@define-color bg0 #1f2329;
+@define-color bg1 #282c34;
+@define-color bg2 #30363f;
+@define-color bg3 #323641;
+@define-color bg-d #181b20;
+@define-color bg-blue #61afef;
+@define-color bg-yellow #e8c88c;
+@define-color fg #a0a8b7;
+@define-color purple #bf68d9;
+@define-color green #8ebd6b;
+@define-color orange #cc9057;
+@define-color blue #4fa6ed;
+@define-color yellow #e2b86b;
+@define-color cyan #48b0bd;
+@define-color red #e55561;
+@define-color grey #535965;
+@define-color light-grey #7a818e;
+@define-color dark-cyan #266269;
+@define-color dark-red #8b3434;
+@define-color dark-yellow #835d1a;
+@define-color dark-purple #7e3992;
+
+* {
+  font-family: system-ui, sans-serif, "Hack Nerd Font";
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+window#waybar {
+  background-color: @bg0;
+  color: @fg;
+}
+
+#custom-arch-logo {
+  margin: 5px;
+  font-size: 1.5rem;
+  color: @blue;
+}
+
+#workspaces * {
+  font-size: 1rem;
+}
+#workspaces button {
+  padding: 0 8px;
+  border-radius: 0;
+  border: 0 solid @bg1;
+  border-bottom-width: 4px;
+}
+#workspaces button:hover {
+  background-color: @bg2;
+}
+#workspaces button.active:not(.special) {
+  background-color: @bg1;
+  border-bottom-color: @green;
+}
+#workspaces button.special {
+  background-color: @bg-yellow;
+  border-bottom-color: @dark-yellow;
+  color: @bg0;
+}
+
+#clock {
+  font-size: 1rem;
+  margin-right: 10px;
+  background-color: @green;
+  color: @bg0;
+  margin: 10px;
+  padding: 0 10px;
+  border-radius: 10px;
+}
+#battery {
+  font-size: 1.8rem;
+  margin-right: 10px;
+  background-color: @bg0;
+  color: @blue;
+}
+#battery.warning {
+  color: @orange;
+}
+#battery.critical {
+  color: @red;
+}
+#battery.charging {
+  color: @green;
+}
+#network {
+  color: @purple;
+  font-size: .8rem;
+  margin: 0 5px;
+}
+
+tooltip {
+  background-color: @bg0;
+  color: @fg;
+  border: 1px solid @cyan;
+  padding: 10px;
+}
