@@ -51,4 +51,6 @@ export SHELL=(which fish)
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.luarocks/bin:$PATH"
 
+export WINE_HOME="$HOME/.wine/drive_c/users/rizwan"
+
 alias fishr="source $HOME/.config/fish/config.fish"

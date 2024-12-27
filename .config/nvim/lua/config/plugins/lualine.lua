@@ -19,9 +19,13 @@ return {
         },
         lualine_c = {
           {
+            function() return " " end,
+            padding = { left = 0, right = 0 },
+          },
+          {
             "filetype",
             icon_only = true,
-            padding = { left = 1, right = 0 },
+            padding = { left = 0, right = 0 },
           },
           {
             "filename",

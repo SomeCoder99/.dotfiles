@@ -11,6 +11,7 @@ local keymaps = {
       ["<leader>bd"] = { cmd = "bd" },
       ["<leader>bD"] = { cmd = "BufferLinePickClose" },
       ["<leader>bo"] = { cmd = "BufferLineCloseOthers" },
+      ["<leader>t"] = "<cmd>term<cr>i",
     },
   },
 }

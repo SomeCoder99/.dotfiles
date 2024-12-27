@@ -18,6 +18,7 @@ return {
           "sass", "scss", "svelte", "typescriptreact", "vue", "htmlangular", "php",
         },
       },
+      rust_analyzer = {},
     },
   },
 
