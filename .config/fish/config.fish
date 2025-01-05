@@ -1,11 +1,14 @@
 function conf
-  set -l files ""
+  set -l dirs ""
   for path in ~/.config/*
-    set files "$files:$path"
+    set dirs "$dirs:$path"
   end
-  set -l file (string split ":" $files | fzf)
-  if test "$file " != " "
-    $EDITOR $file
+  set -l dir (string split ":" $dirs | fzf)
+  if test "$dir " != " "
+    set -l last_pwd $PWD
+    cd $dir
+    $EDITOR
+    cd $last_pwd
   end
 end
 
@@ -44,6 +47,8 @@ end
 
 function fish_greeting
 end
+
+export fish_color_autosuggestion="#000"
 
 export EDITOR="nvim"
 export SHELL=(which fish)
